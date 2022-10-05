@@ -1,0 +1,11 @@
+<div [style.background]="imageVisible && backgroundColor"
+     #wrapper>
+   <img
+   #sourceImage
+   class="source-image"
+   *ngIf="safeImgDataUrl"
+   [src]="safeImgDataUrl"
+   [style.visibility]="imageVisible ? 'visible' : 'hidden'"
+   [style.transform]="safeTransformStyle"
+   (load)="imageLoadedInView()"/>
+</div>
